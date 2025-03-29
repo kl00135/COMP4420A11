@@ -28,6 +28,11 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
+
+      - name: Debug Workspace
+        run: ls -R /home/runner/work/COMP4420A11/COMP4420A11
+
+
       - name: Verify with Maven
         run: |
           echo "TESTING JUnit Sample Project"
