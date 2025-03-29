@@ -27,12 +27,13 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+        
     - name: Verify with Maven
-      run: 
-       echo TESTING JUnit Sample Project
-       cd 'JUnit Sample/JUnit Sample'
-       mvn --batch-mode --update_snapshots clean verify
-       cd ../..
+      run: |
+        echo "TESTING JUnit Sample Project"
+        cd "code/JUnit Sample" || exit 1
+        mvn --batch-mode --update-snapshots clean verify
+
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
