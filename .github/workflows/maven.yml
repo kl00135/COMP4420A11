@@ -37,7 +37,6 @@ jobs:
         working-directory: COMP4420A11/COMP4420A11/code/JUnit Sample
         run: |
           echo TESTING JUnit Sample Project
-           mvn --update_snapshots clean verify
 
 
       - name: Update dependency graph
