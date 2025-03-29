@@ -38,7 +38,7 @@ jobs:
         run: |
           echo TESTING JUnit Sample Project
            mvn --batch-mode --update_snapshots clean verify
-           cd ../..
+
 
       - name: Update dependency graph
         run: |
