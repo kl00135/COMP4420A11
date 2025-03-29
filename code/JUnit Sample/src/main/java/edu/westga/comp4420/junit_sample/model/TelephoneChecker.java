@@ -42,6 +42,19 @@ public class TelephoneChecker {
 	 * 			false	if number does not match heuristics for potential spam
 	 */
 	public boolean identifySpam(long number) {
-		return false;
-	}
+		if (!this.verifyNumber(number)) {
+			throw new IllegalArgumentException("This phone number, (" + number + ") is invalid.");
+		}
+		
+		int areaCode = (int) (number / 10000000);
+		
+		int[] spamCodes = {999, 900, 888, 800, 411, 911};
+		
+		for (int spamCode : spamCodes) {
+			if (areaCode == spamCode) {
+				return true;
+			}
+	    }
+	    return false;
+    }
 }
