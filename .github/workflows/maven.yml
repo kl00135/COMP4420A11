@@ -29,9 +29,9 @@ jobs:
         cache: maven
         
     - name: Verify with Maven
+      working-directory: code/JUnit Sample
       run: |
         echo "TESTING JUnit Sample Project"
-        cd "code/JUnit Sample" || exit 1
         mvn --batch-mode --update-snapshots clean verify
 
 
