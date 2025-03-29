@@ -34,6 +34,7 @@ jobs:
 
 
       - name: Verify with Maven
+        working-directory: COMP4420A11/COMP4420A11/code/JUnit Sample
         run: |
           echo "TESTING JUnit Sample Project"
           cd "code/JUnit Sample" || exit 1
